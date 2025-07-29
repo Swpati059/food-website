@@ -1,0 +1,339 @@
+/* css reset  */
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* css variables */
+:root {
+  --navbar-height: 50px;
+}
+
+/* navigation bar */
+nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 0px;
+}
+nav ::before {
+  content: '';
+  background-color: coral;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 60%;
+  width: 100%;
+  z-index: -3;
+  opacity: 0.4;
+}
+
+/* navigation bar:logo & image */
+label {
+  margin: 8px 9px;
+}
+label img {
+  height: 60px;
+  margin: 13px 15px;
+}
+
+/* navigation bar : list styling */
+nav ul {
+  display: flex;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+nav ul li {
+  /* color: white; */
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+nav ul li a {
+  color: white;
+  display: block;
+  padding: 3px 22px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: black;
+  background-color: white;
+}
+
+/* Home section start */
+#Home {
+  display: flex;
+  flex-direction: column;
+  padding: 3px 200px;
+  height: 688px;
+  justify-content: center;
+  align-items: center;
+}
+#Home::before {
+  content: '';
+  background: url(home.jpg) no-repeat center / cover;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.89;
+}
+#Home h1 {
+  color: whitesmoke;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.9rem;
+}
+#Home p {
+  color: whitesmoke;
+  text-align: left;
+  font-size: 1.4rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+/* Home section ends */
+
+/* servies section  start*/
+#services-container {
+  font-size: 1.3rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+#services {
+  margin: 34px;
+  display: flex;
+  font-size: 1.3rem;
+}
+#services .box {
+  border: 10px brown;
+  padding: 94px;
+  margin: 2px 15px;
+  border-radius: 29px;
+  background: lightgray;
+}
+#services .box img {
+  height: 160px;
+  margin: auto;
+  display: flex;
+  /* flex: 0 0 5rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 .5rem 1rem rgba(209, 126, 126, 0.405);
+      border: .1rem solid rgba(201, 123, 123, 0.405);
+      cursor: pointer;
+      border-radius: .5rem;*/
+}
+#services .box p {
+  font-size: 1.1rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+/* services section ends */
+
+/* Speciality section start */
+.heading {
+  text-align: center;
+  font-size: 3.5rem;
+  padding-top: 0rem;
+  color: #666;
+}
+
+.speciality .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.speciality .box-container .box {
+  flex: 1 1 28rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1rem rgba(209, 126, 126, 0.405);
+  border: 0.1rem solid rgba(201, 123, 123, 0.405);
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+.speciality .box-container .box .image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: -100%;
+  left: 0%;
+}
+.speciality .box-container .box .content {
+  text-align: center;
+  background: #fff;
+  padding: 2rem;
+}
+.speciality .box-container .box .content img {
+  margin: 1.5rem 0;
+  width: 32%;
+}
+.speciality .box-container .box .content h3 {
+  font-size: 2.3rem;
+  color: #333;
+}
+.speciality .box-container .box .content p {
+  font-size: 1.6rem;
+  color: #666;
+  padding: 1rem 0;
+}
+.speciality .box-container .box:hover .image {
+  top: 0;
+}
+.speciality .box-container .box:hover .content {
+  transform: translate(100%);
+}
+
+/* speciality section ends */
+
+/* Most popular Food section start */
+.popular .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5 rem;
+}
+.popular .box-container .box {
+  padding: 2rem;
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border: 0.1rem solid rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  text-align: center;
+  flex: 1 1 30rem;
+  position: relative;
+}
+
+.popular .box-container .box img {
+  height: 25rem;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 0.5rem;
+  display: flex;
+}
+.popular .box-container .box .price {
+  padding-top: 0.1rem;
+  background-color: var(--red);
+  color: black;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+}
+.popular .box-container .box h3 {
+  color: #333;
+  font-size: 2rem;
+  padding-top: 1rem;
+}
+
+.popular .box-container .box .stars {
+  color: black;
+  font-size: 2rem;
+}
+/* Most popular Food section ends */
+
+/* Client section start */
+#client-section {
+  height: 344px;
+  position: relative;
+  font-size: 1.3rem;
+}
+#client-section::before {
+  content: '';
+  position: absolute;
+  background: url(platter.jpg) no-repeat center / cover;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+#clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.client-item {
+  padding: 34px;
+}
+#clients img {
+  height: 124px;
+}
+/* client section ends */
+
+/* Contact us section start */
+#contact::before {
+  content: '';
+  position: absolute;
+  height: 68%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.7;
+  background: url(contact.jpg) no-repeat center center/cover;
+}
+#contact {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 34px;
+  font-size: 1.4rem;
+}
+#contact input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 9px;
+  font-size: 1.1rem;
+}
+#contact textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 9px;
+  /* font-size: 0.1rem; */
+}
+#contact form {
+  width: 40%;
+}
+#contact label {
+  font-size: 1.3rem;
+}
+
+footer {
+  background: black;
+  color: white;
+  padding: 9px 20px;
+}
+
+/* contact us section ends */
+
+/* Utility Classes*/
+.h.primary {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 3.8rem;
+  padding: 12px;
+  /* bottom: 10%; */
+}
+
+.h.secondary {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2.3rem;
+  padding: 12px;
+}
+
+.btn {
+  padding: 3px 18px;
+  border: 1px solid white;
+  background-color: rgba(178, 34, 34, 0.405);
+  color: white;
+  margin: 15px;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.center {
+  text-align: center;
+}
+
+/* utility classes ends */
